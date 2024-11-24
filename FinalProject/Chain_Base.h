@@ -26,7 +26,7 @@ public:
     //constructor not needed, because it'll be a copy constructor implemented in derived class
     // += operator will also be done in derived class
     virtual int sell() const = 0; //pure virtual
-    virtual void print(ostream out) const = 0; //because we need to print the chain at some point
+    virtual void print(ostream& out) const = 0; //because we need to print the chain at some point
     
     friend ostream& operator<<(ostream& out, const Chain_Base& chain_base){ //friends of the chain_base class can access this
         //new custom << operation that takes an output stream, and prints a chain to it

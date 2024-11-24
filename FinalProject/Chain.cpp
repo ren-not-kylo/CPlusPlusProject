@@ -33,7 +33,6 @@ public:
         // if not, throw an IllegalType error, otherwise add card to the vector
         if(typeid(*card) != typeid(T)){ //gotta dereference card
             //throw exception
-            throw IllegalType(); //will this work, or do I need to define IllegalType()?
         }
         else{
             //add card to the chain
