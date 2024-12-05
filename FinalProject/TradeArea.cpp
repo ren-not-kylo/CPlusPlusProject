@@ -21,8 +21,9 @@ bool TradeArea::legal(Card* c){
         if(card->getName() == c->getName()){
             name_exists = true;
         }
-        return name_exists;
+        
     }
+    return name_exists;
 } // returns true if a card of the same bean is already in the tradearea
     
 Card* TradeArea::trade(string name){ //removes a card of the corresponding bean name from the trade area, returns it
