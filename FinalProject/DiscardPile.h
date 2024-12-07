@@ -10,9 +10,10 @@ using namespace std;
 class DiscardPile {
 private:
     vector<Card*> dp;
-    DiscardPile(istream&, const CardFactory*);
+    
 
 public:
+    DiscardPile(istream&, const CardFactory*);  
     DiscardPile& operator+=(Card*);
     Card* pickUp();
     Card* top();

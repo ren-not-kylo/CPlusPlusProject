@@ -12,7 +12,41 @@ class DiscardPile {
 
 	// constructor for loading a saved DiscardPile
 	DiscardPile(istream& in, const CardFactory* fact) {
-		
+		char curr;
+		while(in >> curr) {
+			if (curr == 'b') {
+				dp.push_back(fact->allCards[currIndex[0]]);
+				currIndex[0]++;
+			}
+			if (curr == 'B') {
+				dp.push_back(fact->allCards[currIndex[1]]);
+				currIndex[1]++;
+			}
+			if (curr == 'C') {
+				dp.push_back(fact->allCards[currIndex[2]]);
+				currIndex[2]++;
+			}
+			if (curr == 'g') {
+				dp.push_back(fact->allCards[currIndex[3]]);
+				currIndex[3]++;
+			}
+			if (curr == 'G') {
+				dp.push_back(fact->allCards[currIndex[4]]);
+				currIndex[4]++;
+			}
+			if (curr == 'R') {
+				dp.push_back(fact->allCards[currIndex[5]]);
+				currIndex[5]++;
+			}
+			if (curr == 's') {
+				dp.push_back(fact->allCards[currIndex[6]]);
+				currIndex[6]++;
+			}
+			if (curr == 'S') {
+				dp.push_back(fact->allCards[currIndex[7]]);
+				currIndex[7]++;
+			}
+		}
 	}
 
 	// adds a card to the DiscardPile

@@ -26,7 +26,41 @@ private:
     vector<T*> cards; //vector to store the cards in the chain
 public:
     Chain(istream& in, const CardFactory* cf){
-        //accepts an input stream and reconstructs the chain based on its contents
+        char curr;
+		while(in >> curr) {
+			if (curr == 'b') {
+				cards.push_back(fact->allCards[currIndex[0]]);
+				currIndex[0]++;
+			}
+			if (curr == 'B') {
+				cards.push_back(fact->allCards[currIndex[1]]);
+				currIndex[1]++;
+			}
+			if (curr == 'C') {
+				cards.push_back(fact->allCards[currIndex[2]]);
+				currIndex[2]++;
+			}
+			if (curr == 'g') {
+				cards.push_back(fact->allCards[currIndex[3]]);
+				currIndex[3]++;
+			}
+			if (curr == 'G') {
+				cards.push_back(fact->allCards[currIndex[4]]);
+				currIndex[4]++;
+			}
+			if (curr == 'R') {
+				cards.push_back(fact->allCards[currIndex[5]]);
+				currIndex[5]++;
+			}
+			if (curr == 's') {
+				cards.push_back(fact->allCards[currIndex[6]]);
+				currIndex[6]++;
+			}
+			if (curr == 'S') {
+				cards.push_back(fact->allCards[currIndex[7]]);
+				currIndex[7]++;
+			}
+		}
     }
     
     Chain<T>& operator +=(Card* card){

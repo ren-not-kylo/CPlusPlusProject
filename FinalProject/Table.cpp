@@ -11,7 +11,7 @@ using namespace std;
 class Table {
 private:
     Player p1, p2;
-    Deck d;
+    Deck deck;
     DiscardPile dp;
     TradeArea trade;
 
@@ -37,20 +37,20 @@ public:
         
         // constructing each component from the strings
         istringstream deckInSS(deckIn);
-        Deck tempD(deckInSS, fact);
-        
+        Deck d(deckInSS, fact);
         
         istringstream dpInSS(dpIn);
-        Deck tempD(dpInSS, fact);
+        DiscardPile dp(dpInSS, fact);
 
         istringstream taInSS(taIn);
-        Deck tempD(taInSS, fact);
+        TradeArea ta(taInSS, fact);
+
 
         istringstream p1InSS(p1In);
-        Deck tempD(p1InSS, fact);
+        Player p1(p1InSS, fact);
 
         istringstream p2InSS(p2In);
-        Deck tempD(p2InSS, fact);
+        Player p2(p2InSS, fact);
     }
 
     bool win(string& winner) {

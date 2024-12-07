@@ -16,8 +16,42 @@ using namespace std;
 class Hand{ //implemented by a queue
 
     queue<Card*> cards;
-    Hand(istream&, const CardFactory*) {
-
+    Hand(istream& in, const CardFactory* fact) {
+        char curr;
+		while(in >> curr) {
+			if (curr == 'b') {
+				cards.push(fact->allCards[currIndex[0]]);
+				currIndex[0]++;
+			}
+			if (curr == 'B') {
+				cards.push(fact->allCards[currIndex[1]]);
+				currIndex[1]++;
+			}
+			if (curr == 'C') {
+				cards.push(fact->allCards[currIndex[2]]);
+				currIndex[2]++;
+			}
+			if (curr == 'g') {
+				cards.push(fact->allCards[currIndex[3]]);
+				currIndex[3]++;
+			}
+			if (curr == 'G') {
+				cards.push(fact->allCards[currIndex[4]]);
+				currIndex[4]++;
+			}
+			if (curr == 'R') {
+				cards.push(fact->allCards[currIndex[5]]);
+				currIndex[5]++;
+			}
+			if (curr == 's') {
+				cards.push(fact->allCards[currIndex[6]]);
+				currIndex[6]++;
+			}
+			if (curr == 'S') {
+				cards.push(fact->allCards[currIndex[7]]);
+				currIndex[7]++;
+			}
+		}
     }
     Hand& operator+=(Card*) {
 
