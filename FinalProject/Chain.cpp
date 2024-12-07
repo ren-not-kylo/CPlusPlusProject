@@ -24,9 +24,9 @@ class Chain : public Chain_Base {
 private:
     vector<T*> cards; //vector to store the cards in the chain
 public:
-    //Chain(istream& in, const CardFactory* cf){
+    Chain(istream& in, const CardFactory* cf){
         //accepts an input stream and reconstructs the chain based on its contents
-    //}
+    }
     
     Chain<T>& operator +=(Card* card){
         // check if the type of card matches T, which this chain should be holding
@@ -49,7 +49,7 @@ public:
     void print(ostream& out){
         T card = *(cards.front());
         for (int i=0; i<cards.size(); i++) {
-            out << card.getName();
+            card.print(out);
         }
     }
 };

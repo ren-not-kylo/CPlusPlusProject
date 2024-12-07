@@ -33,28 +33,28 @@ using namespace std;
 
 CardFactory::CardFactory(){
     //create all cards: 20 Blue, 18 Chili, 16 Stink, 14 Green, 12 Soy, 10 Black, 8 Red, 6 Garden
-    for(int i=0; i<20; i++){
+    for(int i=0; i< NUM_OF_BLUE; i++){
         allCards.emplace_back(new Blue()); //add a new unique blue card
     }
-    for(int i=0; i<18; i++){
+    for(int i=0; i< NUM_OF_CHILLI; i++){
         allCards.emplace_back(new Chili()); //add a new unique blue card
     }
-    for(int i=0; i<16; i++){
+    for(int i=0; i< NUM_OF_STINK; i++){
         allCards.emplace_back(new Stink()); //add a new unique blue card
     }
-    for(int i=0; i<14; i++){
+    for(int i=0; i< NUM_OF_GREEN; i++){
         allCards.emplace_back(new Green()); //add a new unique blue card
     }
-    for(int i=0; i<12; i++){
+    for(int i=0; i< NUM_OF_SOY; i++){
         allCards.emplace_back(new Soy()); //add a new unique blue card
     }
-    for(int i=0; i<10; i++){
+    for(int i=0; i< NUM_OF_BLACK; i++){
         allCards.emplace_back(new Black()); //add a new unique blue card
     }
-    for(int i=0; i<8; i++){
+    for(int i=0; i< NUM_OF_RED; i++){
         allCards.emplace_back(new Red()); //add a new unique blue card
     }
-    for(int i=0; i<6; i++){
+    for(int i=0; i< NUM_OF_GARDEN; i++){
         allCards.emplace_back(new Garden()); //add a new unique blue card
     }
     

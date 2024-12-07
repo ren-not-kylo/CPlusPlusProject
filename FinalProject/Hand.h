@@ -16,22 +16,27 @@
  */
 
 #include <iostream>
+#include <queue>
 #include "CardFactory.h"
 #include "Card.h"
+
+using namespace std;
+
 class Hand{ //implemented by a queue
 private:
     
 public:
+    queue<Card*> cards;
     Hand(istream&, const CardFactory*); //constructor to reconstruct the Hand from file
     Hand& operator+=(Card*); //adds the Card to the rear of the hand
     Card* play(); //returns and removes top card
     Card* top(); //returns but doesn't remove the top card
     Card* operator[](int); //returns and removes the Card at a given index
     
-    friend ostream& operator<<(ostream& out, const Hand& hand){
-        for (Card* card : hand.cards) { //print each card to the output stream
-            card->print(out);
+    friend ostream& operator<<(ostream& out, const Hand& hand) {
+        while (!hand.cards.empty()) { //print each card to the output stream
+            hand.cards.front()->print(out);
         }
         return out; //then return the stream
     }
-}
+};

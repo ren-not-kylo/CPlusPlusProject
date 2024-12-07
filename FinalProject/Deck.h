@@ -5,8 +5,23 @@
 //  Created by Chelsea Brown on 2024-11-24.
 //
 
+#include <vector>
+#include <iostream>
+using namespace std;
+
 class Deck{
-    //class declarations here
+
+private:
+    Deck(istream, const vector<Card*>&);
+    
 public:
-    Deck(const vector<Card*>&); //default constructor to construct a Deck out of a vector
+    vector<Card*> deck;
+    Card* draw();
+    
+    friend ostream& operator<<(ostream& out, const Deck& d) {
+        for (int i = 0; i < d.deck.size(); i++ ) {
+			d.deck[i]->print(out);
+		}
+		return out;
+    }
 };
