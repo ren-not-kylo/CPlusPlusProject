@@ -18,7 +18,7 @@ private:
 
 public:
     Player(string&);
-    Player(iostream&, const CardFactory*);
+    Player(istream&, const CardFactory*);
     string getName();
     int getNumCoins();
     Player& operator+=(int);

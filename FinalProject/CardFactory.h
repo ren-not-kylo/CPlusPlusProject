@@ -26,19 +26,19 @@ using namespace std;
 // global variables to be used to populate containers from CardFactory
 
 // number of each type of card
-const int NUM_OF_BLACK = 10;
-const int NUM_OF_BLUE = 20;
-const int NUM_OF_CHILLI = 18;
-const int NUM_OF_GARDEN = 6;
-const int NUM_OF_GREEN = 14;
-const int NUM_OF_RED = 8;
-const int NUM_OF_SOY = 12;
-const int NUM_OF_STINK = 16;
+const int NUM_OF_BLACK = 10;  //b
+const int NUM_OF_BLUE = 20;  //B
+const int NUM_OF_CHILLI = 18; //C
+const int NUM_OF_GARDEN = 6;  //g
+const int NUM_OF_GREEN = 14;  //G
+const int NUM_OF_RED = 8;  //R
+const int NUM_OF_SOY = 12;  //s
+const int NUM_OF_STINK = 16;  //S
 const int TOTAL_CARDS = 104;
 
 // array which stores the index of the next card of each type in allCards (in alphabetical order)
 int currIndex[TOTAL_CARDS] = { 0,                                  
-                        currIndex[0] + NUM_OF_BLACK,
+                        currIndex[0] + NUM_OF_BLACK, //
                         currIndex[1] + NUM_OF_BLUE,
                         currIndex[2] + NUM_OF_CHILLI,
                         currIndex[3] + NUM_OF_GARDEN,

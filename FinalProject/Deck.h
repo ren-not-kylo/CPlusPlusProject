@@ -9,13 +9,12 @@
 #include <iostream>
 using namespace std;
 
-class Deck{
-
-private:
-    Deck(istream, const vector<Card*>&);
+class Deck{ 
+    vector<Card*> deck;
     
 public:
-    vector<Card*> deck;
+    Deck(istream&, const CardFactory*);
+    
     Card* draw();
     
     friend ostream& operator<<(ostream& out, const Deck& d) {

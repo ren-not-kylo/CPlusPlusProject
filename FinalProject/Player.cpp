@@ -23,7 +23,7 @@ public:
         name = name;
     }
 
-    Player(iostream&, const CardFactory*) {
+    Player(istream&, const CardFactory*) {
 
     }
 
