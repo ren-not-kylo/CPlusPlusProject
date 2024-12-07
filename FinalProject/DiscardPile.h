@@ -1,3 +1,5 @@
+#ifndef DISCARDPILE_H
+#define DISCARDPILE_H
 #include <vector>
 #include <iostream>
 #include "Card.h"
@@ -19,4 +21,5 @@ public:
         return out;
     }
 
-}
+};
+#endif

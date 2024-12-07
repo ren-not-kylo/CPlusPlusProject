@@ -4,6 +4,10 @@
 //
 //  Created by Chelsea Brown on 2024-11-18.
 //
+
+#ifndef CHAIN_H
+#define CHAIN_H
+
 #include <iostream>
 #include "Card.h"
 #include "Chain_Base.h"
@@ -27,3 +31,4 @@ public:
         return out;
     }
 };
+#endif

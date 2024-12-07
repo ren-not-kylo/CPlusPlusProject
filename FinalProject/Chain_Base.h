@@ -16,7 +16,8 @@
  a start column with the full name of the bean, for example with four cards:
  Red R R R R
  */
-
+#ifndef CHAIN_BASE_H
+#define CHAIN_BASE_H
 #include <iostream>
 using namespace std;
 class Chain_Base {
@@ -34,3 +35,4 @@ public:
         return out; //then return the stream
     }
 };
+#endif

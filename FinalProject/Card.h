@@ -21,6 +21,9 @@
  the “Virtual Friend Function Idiom” with the class hierarchy.
  */
 
+#ifndef CARD_H
+#define CARD_H
+
 #include <iostream>
 using namespace std;
 
@@ -39,3 +42,4 @@ public:
     }
 };
 
+#endif

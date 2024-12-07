@@ -17,6 +17,8 @@
  Also, ensure that no copies can be made of CardFactory and that there is at most one CardFactory
  object in your program.
  */
+#ifndef CARDFACTORY_H
+#define CARDFACTORY_H
 
 #include <stdio.h>
 #include "Card.h"
@@ -75,3 +77,5 @@ public:
     void operator=(const CardFactory&) = delete; //no assignment operator
     ~CardFactory() = default; // destructor
 };
+
+#endif

@@ -17,8 +17,12 @@
  - int numCards() returns the number of cards currently in the trade area.
  - and the insertion operator (friend) to insert all the cards of the trade area to an std::ostream.
  */
+
+#ifndef TRADEAREA_H
+#define TRADEAREA_H
 #include <iostream>
 #include <list>
+
 #include "Card.h"
 #include "CardFactory.h"
 
@@ -29,10 +33,11 @@ private:
     
 public:
     TradeArea(istream&, const CardFactory*); //constructor that reconstructs the trade area from the file, using the cardfactory
-    TradeArea& operator+=(Card* c){
-        storage_list.push_back(c); //add it to the back of the storage list?
-    } //adds the card to the trade area (after checking legality)
     
+    TradeArea& operator +=(Card* card){
+        //add card to the chain
+        storage_list.push_back(card);
+    }
     bool legal(Card*); // returns true if a card of the same bean is already in the tradearea
     
     Card* trade(string); //removes a card of the corresponding bean name from the trade area
@@ -46,3 +51,4 @@ public:
         return out; //then return the stream
     }
 };
+#endif

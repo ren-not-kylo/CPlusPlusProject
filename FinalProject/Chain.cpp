@@ -18,6 +18,7 @@
  */
 #include "Chain_Base.h"
 #include "Card.h"
+#include "CardFactory.h"
 
 template <typename T>
 class Chain : public Chain_Base {
@@ -33,6 +34,7 @@ public:
         // if not, throw an IllegalType error, otherwise add card to the vector
         if(typeid(*card) != typeid(T)){ //gotta dereference card
             //throw exception
+            throw card;
         }
         else{
             //add card to the chain

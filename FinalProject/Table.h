@@ -1,3 +1,6 @@
+#ifndef TABLE_H
+#define TABLE_H
+
 #include <iostream>
 #include "Player.h"
 #include "Deck.h"
@@ -21,3 +24,4 @@ public:
         return out;
     }
 };
+#endif

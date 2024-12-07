@@ -4,7 +4,8 @@
 //
 //  Created by Chelsea Brown on 2024-11-24.
 //
-
+#ifndef DECK_H
+#define DECK_H
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -25,3 +26,4 @@ public:
 		return out;
     }
 };
+#endif
