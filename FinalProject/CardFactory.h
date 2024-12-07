@@ -63,7 +63,7 @@ class CardFactory{
     //singleton pattern
     //define this after tradeArea
 private:
-    //constructor probably?
+
     CardFactory();
     static CardFactory* instance;
     

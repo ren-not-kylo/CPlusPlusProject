@@ -75,5 +75,5 @@ Deck CardFactory::getDeck(){
     auto rng = default_random_engine {}; //random number generator
     ranges::shuffle(deckCards.begin(), deckCards.end(), rng); //randomize cards
     
-    return Deck(deckCards); //TODO: make sure Jarrett knows to have a second constructor that takes a vector of cards, essentially a copy constructor
+    return Deck(); //This actually doesn't return what it's supposed to
 }
