@@ -17,9 +17,12 @@ class Deck{
     vector<Card*> deck;
     
 public:
+    Deck(CardFactory*); //second constructor
     Deck(istream&, const CardFactory*);
     
     Card* draw();
+    
+    void shuffle();
     
     friend ostream& operator<<(ostream& out, const Deck& d) {
         for (int i = 0; i < d.deck.size(); i++ ) {
@@ -27,5 +30,6 @@ public:
 		}
 		return out;
     }
+    bool isEmpty();
 };
 #endif

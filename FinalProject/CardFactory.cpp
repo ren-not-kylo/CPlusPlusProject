@@ -67,6 +67,7 @@ CardFactory* CardFactory::getFactory(){
     return instance;
 }
 
+/*
 Deck CardFactory::getDeck(){
     vector<Card*> deckCards;
     for (const auto& card : allCards){
@@ -77,3 +78,10 @@ Deck CardFactory::getDeck(){
     
     return Deck(); //This actually doesn't return what it's supposed to
 }
+*/
+
+Deck CardFactory::getDeck(){
+    Deck d(this);
+    return d;
+}
+
